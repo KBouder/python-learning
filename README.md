@@ -4,10 +4,10 @@
 Learning Python Fundamentals as part of my transition from manufacturing to IT.
 
 ## Skills Covered
-- [ ] Variables and data types
-- [ ] Control Flow (if/else, loops)
-- [ ] Functions
-- [ ] Error handling
+- [X] Variables and data types
+- [X] Control Flow (if/else, loops)
+- [X] Functions
+- [X] Error handling
 - [ ] File I/O
 - [ ] Object-oriented programming
 - [ ] Web APIs
