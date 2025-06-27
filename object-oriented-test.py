@@ -19,10 +19,24 @@ class Me: # Define Class
         language_list = ', '.join(self.languages) # Take language list, and combine them with ', ' separator
         return f"Hi, my name is {self.name}, I am {self.age} years old. I know {language_list} programming languages. I know {len(self.languages)} languages in total!"
     
-kyle = Me("Kyle", 27) # Object Creation
-kyle.add_language("C++", 1)
-kyle.add_language("Java", 1)
-kyle.add_language("Python", 0)
+class ITWorker(Me): # Define Child Class, Inherits everything from Me
+    def __init__(self, name, age, specialization):
+        super().__init__(name, age) # Call parent constructor
+        self.specialization = specialization
+        self.certifications = []
 
-print(kyle.introduce()) # Print The Introduction
+    def add_certification(self, cert):
+        self.certifications.append(cert)
 
+    def introduce(self):
+        base_intro = super().introduce() # Get parent's introduction, returns original introduction
+        return f"{base_intro} I'm specializing in {self.specialization}." # then returns ITWorker's Introduction afterwards
+    
+kyle_student = Me("Kyle", 27) # Object Creation
+kyle_student.add_language("Python", 0)
+kyle_it = ITWorker("Kyle", 27, "Hybrid Cloud Infrastructure")
+kyle_it.add_language("Python", 0)
+kyle_it.add_certification("CompTIA A+ (In Progress)")
+
+# print(kyle_student.introduce()) # Print the Introduction
+print(kyle_it.introduce()) # Print the Second Introduction

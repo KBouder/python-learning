@@ -35,4 +35,4 @@ def function_test():
     s = i+j+k+l
     print(f"The sum is {s}, why not just use a calculator?")
 
-# function_test()
+function_test()
