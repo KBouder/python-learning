@@ -25,9 +25,8 @@ except KeyError:
     # What do?
     print(f"You might want to learn {language_to_check} first!")
 
-print(f"Enter 1 number followed by enter, 4 times, please!")
-
 def function_test():
+    print(f"Enter 1 number followed by enter, 4 times, please!")
     i = int(input("Input a number!"))
     j = int(input("Input another number!"))
     k = int(input("Input yet, another number!"))
@@ -36,4 +35,4 @@ def function_test():
     s = i+j+k+l
     print(f"The sum is {s}, why not just use a calculator?")
 
-function_test()
+# function_test()
